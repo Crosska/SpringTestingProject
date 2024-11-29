@@ -12,6 +12,13 @@ public class Test6 {
         Person person = context.getBean("personBean", Person.class);
         person.callYourPet();
 
+        int age = person.getAge();
+        String surname = person.getSurname();
+        System.out.println(age + " " + surname);
+
+        /*Person person = context.getBean("personBean", Person.class);
+        person.callYourPet();*/
+
         context.close();
 
     }
