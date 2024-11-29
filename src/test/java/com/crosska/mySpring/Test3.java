@@ -13,6 +13,7 @@ public class Test3 {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         Person person = context.getBean("Person", Person.class);
         person.callYourPet();
+        System.out.println(person.getSurname() + " " + person.getAge());
 
         context.close();
     }

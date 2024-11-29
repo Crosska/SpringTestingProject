@@ -18,6 +18,8 @@
     <bean id="Person"
           class="com.crosska.mySpring.Person">
         <property name="pet" ref="Cattich"/>
+        <property name="surname" value="Myzichin"/>
+        <property name="age" value="24"/>
     </bean>
 
 </beans>
