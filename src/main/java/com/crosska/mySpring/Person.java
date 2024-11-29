@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 
 @Component("personBean")
 public class Person {
+
+    @Qualifier("catBean")
+    @Autowired
     private Pet pet;
 
     public int getAge() {
@@ -31,8 +34,8 @@ public class Person {
 
     //public Person() {    }
 
-    @Autowired
-    public void setPet(@Qualifier("catBean") Pet pet) {
+    //@Autowired
+    public void setPet(Pet pet) {
         this.pet = pet;
     }
 
