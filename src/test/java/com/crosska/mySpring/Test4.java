@@ -7,7 +7,7 @@ public class Test4 {
     public static void main(String[] args) {
 
         try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext2.xml")) {
-            Dog dog = (Dog) context.getBean("Doggich");
+            Dog dog = (Dog) context.getBean("dogBean");
             dog.say();
 
 

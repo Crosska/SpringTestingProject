@@ -11,7 +11,7 @@ public class Test3 {
         person.callYourPet();*/
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        Person person = context.getBean("Person", Person.class);
+        Person person = context.getBean("personBean", Person.class);
         person.callYourPet();
         System.out.println(person.getSurname() + " " + person.getAge());
 

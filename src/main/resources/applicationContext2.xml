@@ -9,7 +9,7 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
 
-    <bean id="Doggich"
+    <bean id="dogBean"
           class="com.crosska.mySpring.Dog"
           init-method="init"
           destroy-method="destroy">

@@ -9,21 +9,6 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
 
-    <context:property-placeholder location="classpath:application.properties"/>
-
-    <bean id="dogBean"
-          class="com.crosska.mySpring.Dog">
-    </bean>
-
-    <bean id="catBean"
-          class="com.crosska.mySpring.Cat">
-    </bean>
-
-    <bean id="personBean"
-          class="com.crosska.mySpring.Person">
-        <property name="pet" ref="catBean"/>
-        <property name="surname" value="${person.surname}"/>
-        <property name="age" value="${person.age}"/>
-    </bean>
+    <context:component-scan base-package="com.crosska.mySpring"/>
 
 </beans>

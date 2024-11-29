@@ -1,5 +1,12 @@
 package com.crosska.mySpring;
 
+
+import jakarta.persistence.Entity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component("personBean")
 public class Person {
     private Pet pet;
 
@@ -22,17 +29,15 @@ public class Person {
     private String surname;
     private int age;
 
-    public Person() {
-
-    }
+    //public Person() {    }
 
     public void setPet(Pet pet) {
+
         this.pet = pet;
     }
 
-
-
-    public Person(Pet pet) {
+    @Autowired
+    public Person(@Qualifier("catBean") Pet pet) {
         this.pet = pet;
     }
 
