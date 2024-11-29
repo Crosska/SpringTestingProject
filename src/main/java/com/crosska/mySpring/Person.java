@@ -31,15 +31,15 @@ public class Person {
 
     //public Person() {    }
 
-    public void setPet(Pet pet) {
-
+    @Autowired
+    public void setPet(@Qualifier("catBean") Pet pet) {
         this.pet = pet;
     }
 
-    @Autowired
+   /* @Autowired
     public Person(@Qualifier("catBean") Pet pet) {
         this.pet = pet;
-    }
+    }*/
 
     public void callYourPet() {
         System.out.println("Hello! ");
