@@ -9,12 +9,15 @@
 
     <bean id="Doggich"
           class="com.crosska.mySpring.Dog">
-
     </bean>
 
     <bean id="Cattich"
           class="com.crosska.mySpring.Cat">
+    </bean>
 
+    <bean id="Person"
+          class="com.crosska.mySpring.Person">
+        <property name="pet" ref="Cattich"/>
     </bean>
 
 </beans>
