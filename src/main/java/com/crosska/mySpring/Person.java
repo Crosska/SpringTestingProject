@@ -4,6 +4,7 @@ package com.crosska.mySpring;
 import jakarta.persistence.Entity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component("personBean")
@@ -29,7 +30,9 @@ public class Person {
         this.surname = surname;
     }
 
+   // @Value("${person.surname}")
     private String surname;
+   // @Value("${person.age }")
     private int age;
 
     //public Person() {    }
